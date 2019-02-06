@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  tokenserver:
+    image: ${DOCKER_REGISTRY}tokenserver
+    build:
+      context: .
+      dockerfile: src/TokenServer/Dockerfile
+
+  vendor.api:
+    image: ${DOCKER_REGISTRY}vendorapi
+    build:
+      context: .
+      dockerfile: src/Vendor/Vendor.API/Dockerfile
+
